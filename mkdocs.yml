@@ -1,0 +1,7 @@
+site_name: My First test Docs
+pages:
+    - Home: index.md
+    - About: about.md
+    - Git: 
+        - 'Cheat sheet': 'Git/gitCommands.md'
+theme: readthedocs
