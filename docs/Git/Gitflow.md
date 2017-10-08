@@ -8,3 +8,5 @@ first to install tools like `git`, `util-linux` and `wget` (with those three bei
 during installation). Then simply run this command from a Cygwin shell in your `$HOME`:
 
 	$ wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh stable
+
+	started new feature
