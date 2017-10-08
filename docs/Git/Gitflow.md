@@ -11,3 +11,4 @@ during installation). Then simply run this command from a Cygwin shell in your `
 
 	started new feature
 	new feature hand 2
+from dev
