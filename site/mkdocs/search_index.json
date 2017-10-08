@@ -42,23 +42,73 @@
         },
         {
             "location": "/Git/gitCommands/",
-            "text": "fff\n\n\nCreate a Repository\nFrom scratch -- Create a new local\nrepository\n$ git init [project name]\nDownload from an existing repository\n$ git clone my_url",
+            "text": "fff\n\n\n\n\n\nSetup\n\n\nShow current configuration:\n\n\n$ git config --list\n\n\n\n\nShow repository configuration:\n\n\n$ git config --local --list\n\n\n\n\nShow global configuration:\n\n\n$ git config --global --list\n\n\n\n\n\nShow system configuration:\n\n\n$ git config --system --list\n\n\n\n\n\n\n\nCreate\n\n\nClone an existing repository:\n\n\nThere are two ways:\n\n\nVia SSH\n\n\n$ git clone ssh://user@domain.com/repo.git\n\n\n\n\nVia HTTP\n\n\n$ git clone http://domain.com/user/repo.git\n\n\n\n\nCreate a new local repository:\n\n\n$ git init",
             "title": "Cheat sheet"
         },
         {
             "location": "/Git/gitCommands/#fff",
-            "text": "Create a Repository\nFrom scratch -- Create a new local\nrepository\n$ git init [project name]\nDownload from an existing repository\n$ git clone my_url",
+            "text": "",
             "title": "fff"
         },
         {
+            "location": "/Git/gitCommands/#setup",
+            "text": "",
+            "title": "Setup"
+        },
+        {
+            "location": "/Git/gitCommands/#show-current-configuration",
+            "text": "$ git config --list",
+            "title": "Show current configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#show-repository-configuration",
+            "text": "$ git config --local --list",
+            "title": "Show repository configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#show-global-configuration",
+            "text": "$ git config --global --list",
+            "title": "Show global configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#show-system-configuration",
+            "text": "$ git config --system --list",
+            "title": "Show system configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#create",
+            "text": "",
+            "title": "Create"
+        },
+        {
+            "location": "/Git/gitCommands/#clone-an-existing-repository",
+            "text": "There are two ways:  Via SSH  $ git clone ssh://user@domain.com/repo.git  Via HTTP  $ git clone http://domain.com/user/repo.git",
+            "title": "Clone an existing repository:"
+        },
+        {
+            "location": "/Git/gitCommands/#create-a-new-local-repository",
+            "text": "$ git init",
+            "title": "Create a new local repository:"
+        },
+        {
             "location": "/Git/gitflow/",
-            "text": "Welcome to gitflow",
+            "text": "Welcome to gitflow\n\n\nInstalling on Windows\n\n\nCygwin\n\n\nFor Windows users who wish to use the automated install, it is suggested that you install \nCygwin\n\nfirst to install tools like \ngit\n, \nutil-linux\n and \nwget\n (with those three being packages that can be selected\nduring installation). Then simply run this command from a Cygwin shell in your \n$HOME\n:\n\n\n$ wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh stable\n\nstarted new feature",
             "title": "GitFlow"
         },
         {
             "location": "/Git/gitflow/#welcome-to-gitflow",
             "text": "",
             "title": "Welcome to gitflow"
+        },
+        {
+            "location": "/Git/gitflow/#installing-on-windows",
+            "text": "",
+            "title": "Installing on Windows"
+        },
+        {
+            "location": "/Git/gitflow/#cygwin",
+            "text": "For Windows users who wish to use the automated install, it is suggested that you install  Cygwin \nfirst to install tools like  git ,  util-linux  and  wget  (with those three being packages that can be selected\nduring installation). Then simply run this command from a Cygwin shell in your  $HOME :  $ wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh stable\n\nstarted new feature",
+            "title": "Cygwin"
         }
     ]
 }
