@@ -25,6 +25,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/Git/gitflow/</loc>
+     <lastmod>2017-10-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

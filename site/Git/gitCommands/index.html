@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Cheat sheet - My First test Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Cheat sheet";
+    var mkdocs_page_input_path = "Git\\gitCommands.md";
+    var mkdocs_page_url = "/Git/gitCommands/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> My First test Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Git</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Cheat sheet</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#fff">fff</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#setup">Setup</a></li>
+        
+            <li><a class="toctree-l4" href="#create">Create</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gitflow/">GitFlow</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">My First test Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Git &raquo;</li>
+        
+      
+    
+    <li>Cheat sheet</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="fff">fff</h1>
+<hr>
+
+<h2 id="setup">Setup</h2>
+<h5 id="show-current-configuration">Show current configuration:</h5>
+<pre><code>$ git config --list
+</code></pre>
+
+<h5 id="show-repository-configuration">Show repository configuration:</h5>
+<pre><code>$ git config --local --list
+</code></pre>
+
+<h5 id="show-global-configuration">Show global configuration:</h5>
+<pre><code>$ git config --global --list
+
+</code></pre>
+
+<h5 id="show-system-configuration">Show system configuration:</h5>
+<pre><code>$ git config --system --list
+</code></pre>
+
+<hr>
+
+<h2 id="create">Create</h2>
+<h5 id="clone-an-existing-repository">Clone an existing repository:</h5>
+<p>There are two ways:</p>
+<p>Via SSH</p>
+<pre><code>$ git clone ssh://user@domain.com/repo.git
+</code></pre>
+
+<p>Via HTTP</p>
+<pre><code>$ git clone http://domain.com/user/repo.git
+</code></pre>
+
+<h5 id="create-a-new-local-repository">Create a new local repository:</h5>
+<pre><code>$ git init
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../gitflow/" class="btn btn-neutral float-right" title="GitFlow">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../about/" class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../gitflow/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>
