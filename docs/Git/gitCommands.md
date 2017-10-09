@@ -79,3 +79,12 @@ Or maybe you want to see an ASCII art tree of all the branches, decorated with t
 git log --graph --oneline --decorate --all
 
 ```
+
+log to a text file
+
+```git
+
+git log --all --oneline -50 > log50_latest_commits.txt
+git log --graph --oneline --decorate --all > graph_commits.txt
+
+```
