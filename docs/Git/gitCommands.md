@@ -1,8 +1,7 @@
-# fffhg
+# Git Commands
 
-<hr>
 
-## Setup
+## Setup / Config
 
 ##### Show current configuration:
 ```
@@ -88,3 +87,26 @@ git log --all --oneline -50 > log50_latest_commits.txt
 git log --graph --oneline --decorate --all > graph_commits.txt
 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
