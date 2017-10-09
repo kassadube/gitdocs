@@ -1,0 +1,134 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    About.md  # test new page\n    ...       # Other markdown pages, images and other files.",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-mkdocs",
+            "text": "For full documentation visit  mkdocs.org .",
+            "title": "Welcome to MkDocs"
+        },
+        {
+            "location": "/#commands",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "Commands"
+        },
+        {
+            "location": "/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    About.md  # test new page\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/about/",
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "About"
+        },
+        {
+            "location": "/about/#welcome-to-mkdocs",
+            "text": "For full documentation visit  mkdocs.org .",
+            "title": "Welcome to MkDocs"
+        },
+        {
+            "location": "/about/#commands",
+            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
+            "title": "Commands"
+        },
+        {
+            "location": "/about/#project-layout",
+            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "title": "Project layout"
+        },
+        {
+            "location": "/Git/gitCommands/",
+            "text": "fff\n\n\n\n\n\nSetup\n\n\nShow current configuration:\n\n\n$ git config --list\n\n\n\n\nShow repository configuration:\n\n\n$ git config --local --list\n\n\n\n\nShow global configuration:\n\n\n$ git config --global --list\n\n\n\n\n\nShow system configuration:\n\n\n$ git config --system --list\n\n\n\n\n\n\n\nCreate\n\n\nClone an existing repository:\n\n\nThere are two ways:\n\n\nVia SSH\n\n\n$ git clone ssh://user@domain.com/repo.git\n\n\n\n\nVia HTTP\n\n\n$ git clone http://domain.com/user/repo.git\n\n\n\n\nCreate a new local repository:\n\n\n$ git init",
+            "title": "Cheat sheet"
+        },
+        {
+            "location": "/Git/gitCommands/#fff",
+            "text": "",
+            "title": "fff"
+        },
+        {
+            "location": "/Git/gitCommands/#setup",
+            "text": "",
+            "title": "Setup"
+        },
+        {
+            "location": "/Git/gitCommands/#show-current-configuration",
+            "text": "$ git config --list",
+            "title": "Show current configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#show-repository-configuration",
+            "text": "$ git config --local --list",
+            "title": "Show repository configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#show-global-configuration",
+            "text": "$ git config --global --list",
+            "title": "Show global configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#show-system-configuration",
+            "text": "$ git config --system --list",
+            "title": "Show system configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#create",
+            "text": "",
+            "title": "Create"
+        },
+        {
+            "location": "/Git/gitCommands/#clone-an-existing-repository",
+            "text": "There are two ways:  Via SSH  $ git clone ssh://user@domain.com/repo.git  Via HTTP  $ git clone http://domain.com/user/repo.git",
+            "title": "Clone an existing repository:"
+        },
+        {
+            "location": "/Git/gitCommands/#create-a-new-local-repository",
+            "text": "$ git init",
+            "title": "Create a new local repository:"
+        },
+        {
+            "location": "/Git/gitflow/",
+            "text": "Introducing GitFlow\n\n\n\n\nwhat is git flow\n\n\nGitFlow is a branching model for Git, created by Vincent Driessen.\nit is very well suited to collaboration and scaling the development team.\n\n\nKey Benefits\n\n\nParallel Development\n\n\nOne of the great things about GitFlow is that it makes parallel development very easy,by isolating new development from finished work. New development (such as features and non-emergency bug fixes) is done in feature branches, and is only merged back into main body of code when the developer(s) is happy that the code is ready for release.\nAlthough interruptions are a BadThing(tm), if you are asked to switch from one task to another, all you need to do is commit your changes and then create a new feature branch for your new task. When that task is done, just checkout your original feature branch and you can continue where you left off.\n\n\nCollaboration\n\n\nFeature branches also make it easier for two or more developers to collaborate on the same feature, because each feature branch is a sandbox where the only changes are the changes necessary to get the new feature working. That makes it very easy to see and follow what each collaborator is doing.\n\n\nRelease Staging Area\n\n\nAs new development is completed, it gets merged back into the develop branch, which is a staging area for all completed features that haven\u2019t yet been released. So when the next release is branched off of develop, it will automatically contain all of the new stuff that has been finished.\n\n\nSupport For Emergency Fixes\n\n\nGitFlow supports hotfix branches - branches made from a tagged release. You can use these to make an emergency change, safe in the knowledge that the hotfix will only contain your emergency fix. There\u2019s no risk that you\u2019ll accidentally merge in new development at the same time.",
+            "title": "GitFlow"
+        },
+        {
+            "location": "/Git/gitflow/#introducing-gitflow",
+            "text": "",
+            "title": "Introducing GitFlow"
+        },
+        {
+            "location": "/Git/gitflow/#what-is-git-flow",
+            "text": "GitFlow is a branching model for Git, created by Vincent Driessen.\nit is very well suited to collaboration and scaling the development team.",
+            "title": "what is git flow"
+        },
+        {
+            "location": "/Git/gitflow/#key-benefits",
+            "text": "",
+            "title": "Key Benefits"
+        },
+        {
+            "location": "/Git/gitflow/#parallel-development",
+            "text": "One of the great things about GitFlow is that it makes parallel development very easy,by isolating new development from finished work. New development (such as features and non-emergency bug fixes) is done in feature branches, and is only merged back into main body of code when the developer(s) is happy that the code is ready for release.\nAlthough interruptions are a BadThing(tm), if you are asked to switch from one task to another, all you need to do is commit your changes and then create a new feature branch for your new task. When that task is done, just checkout your original feature branch and you can continue where you left off.",
+            "title": "Parallel Development"
+        },
+        {
+            "location": "/Git/gitflow/#collaboration",
+            "text": "Feature branches also make it easier for two or more developers to collaborate on the same feature, because each feature branch is a sandbox where the only changes are the changes necessary to get the new feature working. That makes it very easy to see and follow what each collaborator is doing.",
+            "title": "Collaboration"
+        },
+        {
+            "location": "/Git/gitflow/#release-staging-area",
+            "text": "As new development is completed, it gets merged back into the develop branch, which is a staging area for all completed features that haven\u2019t yet been released. So when the next release is branched off of develop, it will automatically contain all of the new stuff that has been finished.",
+            "title": "Release Staging Area"
+        },
+        {
+            "location": "/Git/gitflow/#support-for-emergency-fixes",
+            "text": "GitFlow supports hotfix branches - branches made from a tagged release. You can use these to make an emergency change, safe in the knowledge that the hotfix will only contain your emergency fix. There\u2019s no risk that you\u2019ll accidentally merge in new development at the same time.",
+            "title": "Support For Emergency Fixes"
+        }
+    ]
+}
