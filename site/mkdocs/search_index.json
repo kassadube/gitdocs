@@ -39,6 +39,16 @@
             "location": "/about/#project-layout",
             "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
             "title": "Project layout"
+        },
+        {
+            "location": "/Git/gitCommands/",
+            "text": "fff\n\n\nCreate a Repository\nFrom scratch -- Create a new local\nrepository\n$ git init [project name]\nDownload from an existing repository\n$ git clone my_url",
+            "title": "Cheat sheet"
+        },
+        {
+            "location": "/Git/gitCommands/#fff",
+            "text": "Create a Repository\nFrom scratch -- Create a new local\nrepository\n$ git init [project name]\nDownload from an existing repository\n$ git clone my_url",
+            "title": "fff"
         }
     ]
 }

@@ -4,4 +4,6 @@ pages:
     - About: about.md
     - Git: 
         - 'Cheat sheet': 'Git/gitCommands.md'
+        - 'Gitflow': 'Git/GitFlow.md'
+
 theme: readthedocs
