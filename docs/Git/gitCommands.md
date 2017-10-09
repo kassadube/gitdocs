@@ -45,6 +45,21 @@ $ git clone http://domain.com/user/repo.git
 ```
 
 ##### Create a new local repository:
+
 ```
+
 $ git init
+
+```
+
+<hr>
+
+## git log
+
+short log
+
+```git
+
+    git log --oneline --decorate
+
 ```
