@@ -63,3 +63,19 @@ short log
     git log --oneline --decorate
 
 ```
+
+To see a very compressed log where each commit is one line
+
+```git
+
+git log --pretty=oneline
+
+```
+
+Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches:
+
+```git
+
+git log --graph --oneline --decorate --all
+
+```
