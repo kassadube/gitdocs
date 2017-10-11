@@ -68,6 +68,14 @@
             
     <li class="toctree-l3"><a href="#fff">fff</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l4" href="#setup">Setup</a></li>
+        
+            <li><a class="toctree-l4" href="#create">Create</a></li>
+        
+        </ul>
+    
 
     </ul>
                 </li>
@@ -115,12 +123,42 @@
             <div class="section">
               
                 <h1 id="fff">fff</h1>
-<p>Create a Repository
-From scratch -- Create a new local
-repository
-$ git init [project name]
-Download from an existing repository
-$ git clone my_url</p>
+<hr>
+
+<h2 id="setup">Setup</h2>
+<h5 id="show-current-configuration">Show current configuration:</h5>
+<pre><code>$ git config --list
+</code></pre>
+
+<h5 id="show-repository-configuration">Show repository configuration:</h5>
+<pre><code>$ git config --local --list
+</code></pre>
+
+<h5 id="show-global-configuration">Show global configuration:</h5>
+<pre><code>$ git config --global --list
+
+</code></pre>
+
+<h5 id="show-system-configuration">Show system configuration:</h5>
+<pre><code>$ git config --system --list
+</code></pre>
+
+<hr>
+
+<h2 id="create">Create</h2>
+<h5 id="clone-an-existing-repository">Clone an existing repository:</h5>
+<p>There are two ways:</p>
+<p>Via SSH</p>
+<pre><code>$ git clone ssh://user@domain.com/repo.git
+</code></pre>
+
+<p>Via HTTP</p>
+<pre><code>$ git clone http://domain.com/user/repo.git
+</code></pre>
+
+<h5 id="create-a-new-local-repository">Create a new local repository:</h5>
+<pre><code>$ git init
+</code></pre>
               
             </div>
           </div>
