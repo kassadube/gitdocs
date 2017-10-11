@@ -88,6 +88,11 @@ git log --graph --oneline --decorate --all > graph_commits.txt
 
 ```
 
+```git
+git log --no-merges --stat --reverse master..
+//since forked from master 
+```
+
 
 
 
