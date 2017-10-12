@@ -38,6 +38,9 @@ Each developer pulls and pushes to origin.
 
 
 ## The main branches
+
+<img align="right" src="../../img/main-branches@2x.png" width="350"/>
+
 The central repo holds two main branches with an infinite lifetime.
 
 * master
@@ -45,7 +48,12 @@ The central repo holds two main branches with an infinite lifetime.
 
 The master branch at origin is the default branch when creating new repository at Git. Parallel to the master branch, another branch exists called develop.
 
-<img src="../../img/main-branches@2x.png" width="350"/>
-
-
 We consider origin/master to be the main branch where the source code of HEAD always reflects a production-ready state.
+
+We consider origin/develop to be the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release.
+
+When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master somehow and then tagged with a release number.
+
+Therefore, each time when changes are merged back into master, this is a new production release by **definition**.
+so that theoretically, we could use a Git hook script to automatically build and roll-out our software to our production servers everytime there was a commit on master.
+
