@@ -25,3 +25,27 @@ As new development is completed, it gets merged back into the develop branch, wh
 ### Support For Emergency Fixes
 
 GitFlow supports hotfix branches - branches made from a tagged release. You can use these to make an emergency change, safe in the knowledge that the hotfix will only contain your emergency fix. There’s no risk that you’ll accidentally merge in new development at the same time.
+
+## **Implementation**
+
+### Decentralized but centralized
+
+The repository setup that we use and that works well with this branching model, is that with a central “truth” repo. Note that this repo is only considered to be the central one (since Git is a DVCS, there is no such thing as a central repo at a technical level). We will refer to this repo as origin, since this name is familiar to all Git users.
+
+Each developer pulls and pushes to origin.
+
+![](../img/centr-decentr@2x_.png)
+
+
+## The main branches
+The central repo holds two main branches with an infinite lifetime.
+
+* master
+* develop
+
+The master branch at origin is the default branch when creating new repository at Git. Parallel to the master branch, another branch exists called develop.
+
+<img src="../../img/main-branches@2x.png" width="350"/>
+
+
+We consider origin/master to be the main branch where the source code of HEAD always reflects a production-ready state.
