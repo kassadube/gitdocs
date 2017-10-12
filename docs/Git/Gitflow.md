@@ -57,3 +57,41 @@ When the source code in the develop branch reaches a stable point and is ready t
 Therefore, each time when changes are merged back into master, this is a new production release by **definition**.
 so that theoretically, we could use a Git hook script to automatically build and roll-out our software to our production servers everytime there was a commit on master.
 
+## Supporting branches
+
+Next to the main branches master and develop, our development model uses a variety of supporting branches to aid parallel development between team members, ease tracking of features, prepare for production releases and to assist in quickly fixing live production problems. Unlike the main branches, these branches always have a limited life time, since they will be removed eventually.
+
+The different types of branches we may use are:
+
+
+* Feature branches
+* Release branches
+* Hotfix branches
+* Bugfix branches
+
+Each of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets.
+
+By no means are these branches “special” from a technical perspective. The branch types are categorized by how we use them. They are of course plain old Git branches.
+
+### Feature Branches
+
+<img align="right" src="../../img/fb@2x.png" width="150"/>
+
+Must branch off from:<br/>
+ <span style="padding-left:40px;font-weight:bold"> develop </span>
+
+Must merge back into:<br/>
+<span style="padding-left:40px;font-weight:bold"> develop </span>
+
+Branch naming convention:<br/>
+<span style="padding-left:40px;font-weight:bold"> feature_< nameOfFeature > </span>
+
+Feature branches are used to develop new features for the upcoming or a distant future release.
+
+Feature branch exists as long as the feature is in development, but will eventually be merged back into develop to add the new feature to the upcoming release.
+
+
+<div style="clear:both"></div>
+
+
+
