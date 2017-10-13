@@ -67,9 +67,19 @@ To see a very compressed log where each commit is one line
 
 ```git
 
+git log --online
 git log --pretty=oneline
 
 ```
+
+show relog
+
+```bash
+
+git relog
+
+```
+
 
 Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches:
 
