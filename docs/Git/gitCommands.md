@@ -93,6 +93,12 @@ git log --no-merges --stat --reverse master..
 //since forked from master 
 ```
 
+Get commit that exists in one branch and not the other
+
+```bash
+
+* git log feature_gitflowdoc...develop
+```
 ## Git Branch
 
 show all branches with there last commit
