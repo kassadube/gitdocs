@@ -72,11 +72,11 @@ git log --pretty=oneline
 
 ```
 
-show relog
+show reflog
 
 ```bash
 
-git relog
+git reflog
 
 ```
 
