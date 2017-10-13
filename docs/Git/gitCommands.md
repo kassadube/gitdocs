@@ -98,8 +98,28 @@ Get commit that exists in one branch and not the other
 ```bash
 
 * git log feature_gitflowdoc...develop
+
 ```
 ## Git Branch
+
+create new local branch and checkout
+
+```bash
+
+* git checkout -b newbranchName
+
+```
+
+delete branch
+
+```bash
+
+git branch -d branchNametoDel
+//delete from local
+git push origin :branchNametoDel
+// delete from remote
+
+```
 
 show all branches with there last commit
 
