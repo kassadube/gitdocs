@@ -93,7 +93,15 @@ git log --no-merges --stat --reverse master..
 //since forked from master 
 ```
 
+## Git Branch
 
+show all branches with there last commit
+
+```bash
+
+* git branch -avv
+
+```
 
 
 
