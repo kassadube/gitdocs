@@ -77,13 +77,13 @@ By no means are these branches “special” from a technical perspective. The b
 
 <img align="right" src="../../img/fb@2x.png" width="150"/>
 
-Must branch off from:<br/>
+Must branch off from:  
  <span style="padding-left:40px;font-weight:bold"> develop </span>
 
-Must merge back into:<br/>
+Must merge back into:  
 <span style="padding-left:40px;font-weight:bold"> develop </span>
 
-Branch naming convention:<br/>
+Branch naming convention:  
 <span style="padding-left:40px;font-weight:bold"> feature_< nameOfFeature > </span>
 
 Feature branches are used to develop new features for the upcoming or a distant future release.
