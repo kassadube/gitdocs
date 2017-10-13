@@ -103,6 +103,16 @@ show all branches with there last commit
 
 ```
 
+## Git Commit
+
+delete last commit in a branch and move the changes back to staging.
+
+```bash
+
+ git reset HEAD~  
+
+ ```
+
 
 
 
