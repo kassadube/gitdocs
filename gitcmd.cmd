@@ -1,2 +1,2 @@
-call git statuss
+call git status
 echo %1
