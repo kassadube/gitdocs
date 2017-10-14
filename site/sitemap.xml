@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-09</lastmod>
+     <lastmod>2017-10-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/about/</loc>
-     <lastmod>2017-10-09</lastmod>
+     <lastmod>2017-10-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,14 +20,20 @@
     
         
     <url>
-     <loc>/Git/gitCommands/</loc>
-     <lastmod>2017-10-09</lastmod>
+     <loc>/Git/WhatisGit/</loc>
+     <lastmod>2017-10-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/Git/gitflow/</loc>
-     <lastmod>2017-10-09</lastmod>
+     <lastmod>2017-10-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Git/gitCommands/</loc>
+     <lastmod>2017-10-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
