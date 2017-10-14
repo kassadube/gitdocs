@@ -63,7 +63,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../gitCommands/">Cheat sheet</a>
+    <a class="" href="../WhatisGit/">What is Git</a>
                 </li>
                 <li class=" current">
                     
@@ -78,10 +78,22 @@
         
             <li><a class="toctree-l4" href="#key-benefits">Key Benefits</a></li>
         
+            <li><a class="toctree-l4" href="#implementation">Implementation</a></li>
+        
+            <li><a class="toctree-l4" href="#the-main-branches">The main branches</a></li>
+        
+            <li><a class="toctree-l4" href="#supporting-branches">Supporting branches</a></li>
+        
+            <li><a class="toctree-l4" href="#feature-branches">Feature Branches</a></li>
+        
         </ul>
     
 
     </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gitCommands/">Cheat sheet</a>
                 </li>
     </ul>
 	    </li>
@@ -137,6 +149,66 @@ Although interruptions are a BadThing(tm), if you are asked to switch from one t
 <p>As new development is completed, it gets merged back into the develop branch, which is a staging area for all completed features that haven’t yet been released. So when the next release is branched off of develop, it will automatically contain all of the new stuff that has been finished.</p>
 <h3 id="support-for-emergency-fixes">Support For Emergency Fixes</h3>
 <p>GitFlow supports hotfix branches - branches made from a tagged release. You can use these to make an emergency change, safe in the knowledge that the hotfix will only contain your emergency fix. There’s no risk that you’ll accidentally merge in new development at the same time.</p>
+<h2 id="implementation"><strong>Implementation</strong></h2>
+<h3 id="decentralized-but-centralized">Decentralized but centralized</h3>
+<p>The repository setup that we use and that works well with this branching model, is that with a central “truth” repo. Note that this repo is only considered to be the central one (since Git is a DVCS, there is no such thing as a central repo at a technical level). We will refer to this repo as origin, since this name is familiar to all Git users.</p>
+<p>Each developer pulls and pushes to origin.</p>
+<p><img alt="" src="../../img/centr-decentr@2x_.png" /></p>
+<h2 id="the-main-branches">The main branches</h2>
+<p><img align="right" src="../../img/main-branches@2x.png" width="350"/></p>
+<p>The central repo holds two main branches with an infinite lifetime.</p>
+<ul>
+<li>master</li>
+<li>develop</li>
+</ul>
+<p>The master branch at origin is the default branch when creating new repository at Git. Parallel to the master branch, another branch exists called develop.</p>
+<p>We consider origin/master to be the main branch where the source code of HEAD always reflects a production-ready state.</p>
+<p>We consider origin/develop to be the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release.</p>
+<p>When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master somehow and then tagged with a release number.</p>
+<p>Therefore, each time when changes are merged back into master, this is a new production release by <strong>definition</strong>.
+so that theoretically, we could use a Git hook script to automatically build and roll-out our software to our production servers everytime there was a commit on master.</p>
+<h2 id="supporting-branches">Supporting branches</h2>
+<p>Next to the main branches master and develop, our development model uses a variety of supporting branches to aid parallel development between team members, ease tracking of features, prepare for production releases and to assist in quickly fixing live production problems. Unlike the main branches, these branches always have a limited life time, since they will be removed eventually.</p>
+<p>The different types of branches we may use are:</p>
+<ul>
+<li>Feature branches</li>
+<li>Release branches</li>
+<li>Hotfix branches</li>
+<li>Bugfix branches</li>
+</ul>
+<p>Each of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets.</p>
+<p>By no means are these branches “special” from a technical perspective. The branch types are categorized by how we use them. They are of course plain old Git branches.</p>
+<h2 id="feature-branches">Feature Branches</h2>
+<p><img align="right" src="../../img/fb@2x.png" width="150"/></p>
+<p>Must branch off from:<br />
+ <span style="padding-left:40px;font-weight:bold"> develop </span></p>
+<p>Must merge back into:<br />
+<span style="padding-left:40px;font-weight:bold"> develop </span></p>
+<p>Branch naming convention:<br />
+<span style="padding-left:40px;font-weight:bold"> feature_&lt; nameOfFeature &gt; </span></p>
+<p>Feature branches are used to develop new features for the upcoming or a distant future release.</p>
+<p>Feature branch exists as long as the feature is in development, but will eventually be merged back into develop to add the new feature to the upcoming release.</p>
+<h5 id="creating-feature-branch">Creating Feature branch</h5>
+<p>When starting work on a new feature, branch off from the develop branch.</p>
+<pre><code class="bash">$ git checkout develop
+$ git checkout -b feature_newFeature
+# Switched to a new branch &quot;feature_newFeature&quot;
+</code></pre>
+
+<h4 id="incorporating-a-finished-feature-on-develop">Incorporating a finished feature on develop</h4>
+<pre><code class="bash">$ git checkout develop
+#Switched to branch 'develop'
+$ git merge --no-ff feature_newFeature
+#Updating ea1b82a..05e9557
+#(Summary of changes)
+$ git branch -d feature_newFeature
+#Deleted branch myfeature (was 05e9557).
+$ git push origin develop
+</code></pre>
+
+<p>The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.<br />
+In the latter case, it is impossible to see from the Git history which of the commit objects together have implemented a feature—you would have to manually read all the log messages.</p>
+<div style="clear:both"></div>
               
             </div>
           </div>
@@ -144,8 +216,10 @@ Although interruptions are a BadThing(tm), if you are asked to switch from one t
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../gitCommands/" class="btn btn-neutral float-right" title="Cheat sheet">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../gitCommands/" class="btn btn-neutral" title="Cheat sheet"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../WhatisGit/" class="btn btn-neutral" title="What is Git"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -171,8 +245,10 @@ Although interruptions are a BadThing(tm), if you are asked to switch from one t
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../gitCommands/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../WhatisGit/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../gitCommands/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -41,58 +41,18 @@
             "title": "Project layout"
         },
         {
-            "location": "/Git/gitCommands/",
-            "text": "fff\n\n\n\n\n\nSetup\n\n\nShow current configuration:\n\n\n$ git config --list\n\n\n\n\nShow repository configuration:\n\n\n$ git config --local --list\n\n\n\n\nShow global configuration:\n\n\n$ git config --global --list\n\n\n\n\n\nShow system configuration:\n\n\n$ git config --system --list\n\n\n\n\n\n\n\nCreate\n\n\nClone an existing repository:\n\n\nThere are two ways:\n\n\nVia SSH\n\n\n$ git clone ssh://user@domain.com/repo.git\n\n\n\n\nVia HTTP\n\n\n$ git clone http://domain.com/user/repo.git\n\n\n\n\nCreate a new local repository:\n\n\n$ git init",
-            "title": "Cheat sheet"
+            "location": "/Git/WhatisGit/",
+            "text": "What is Git\n\n\nBy far, the most widely used modern version control system in the world today is Git. Git is a mature, actively maintained open source project originally developed in 2005 by Linus Torvalds, the famous creator of the Linux operating system kernel. A staggering number of software projects rely on Git for version control, including commercial projects as well as open source. Developers who have worked with Git are well represented in the pool of available software development talent and it works well on a wide range of operating systems and IDEs (Integrated Development Environments).\nHaving a distributed architecture, Git is an example of a DVCS (hence Distributed Version Control System). Rather than have only one single place for the full version history of the software as is common in once-popular version control systems like CVS or Subversion (also known as SVN), in Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.\n\n\nIn addition to being distributed, Git has been designed with performance, security and flexibility in mind.",
+            "title": "What is Git"
         },
         {
-            "location": "/Git/gitCommands/#fff",
-            "text": "",
-            "title": "fff"
-        },
-        {
-            "location": "/Git/gitCommands/#setup",
-            "text": "",
-            "title": "Setup"
-        },
-        {
-            "location": "/Git/gitCommands/#show-current-configuration",
-            "text": "$ git config --list",
-            "title": "Show current configuration:"
-        },
-        {
-            "location": "/Git/gitCommands/#show-repository-configuration",
-            "text": "$ git config --local --list",
-            "title": "Show repository configuration:"
-        },
-        {
-            "location": "/Git/gitCommands/#show-global-configuration",
-            "text": "$ git config --global --list",
-            "title": "Show global configuration:"
-        },
-        {
-            "location": "/Git/gitCommands/#show-system-configuration",
-            "text": "$ git config --system --list",
-            "title": "Show system configuration:"
-        },
-        {
-            "location": "/Git/gitCommands/#create",
-            "text": "",
-            "title": "Create"
-        },
-        {
-            "location": "/Git/gitCommands/#clone-an-existing-repository",
-            "text": "There are two ways:  Via SSH  $ git clone ssh://user@domain.com/repo.git  Via HTTP  $ git clone http://domain.com/user/repo.git",
-            "title": "Clone an existing repository:"
-        },
-        {
-            "location": "/Git/gitCommands/#create-a-new-local-repository",
-            "text": "$ git init",
-            "title": "Create a new local repository:"
+            "location": "/Git/WhatisGit/#what-is-git",
+            "text": "By far, the most widely used modern version control system in the world today is Git. Git is a mature, actively maintained open source project originally developed in 2005 by Linus Torvalds, the famous creator of the Linux operating system kernel. A staggering number of software projects rely on Git for version control, including commercial projects as well as open source. Developers who have worked with Git are well represented in the pool of available software development talent and it works well on a wide range of operating systems and IDEs (Integrated Development Environments).\nHaving a distributed architecture, Git is an example of a DVCS (hence Distributed Version Control System). Rather than have only one single place for the full version history of the software as is common in once-popular version control systems like CVS or Subversion (also known as SVN), in Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.  In addition to being distributed, Git has been designed with performance, security and flexibility in mind.",
+            "title": "What is Git"
         },
         {
             "location": "/Git/gitflow/",
-            "text": "Introducing GitFlow\n\n\n\n\nwhat is git flow\n\n\nGitFlow is a branching model for Git, created by Vincent Driessen.\nit is very well suited to collaboration and scaling the development team.\n\n\nKey Benefits\n\n\nParallel Development\n\n\nOne of the great things about GitFlow is that it makes parallel development very easy,by isolating new development from finished work. New development (such as features and non-emergency bug fixes) is done in feature branches, and is only merged back into main body of code when the developer(s) is happy that the code is ready for release.\nAlthough interruptions are a BadThing(tm), if you are asked to switch from one task to another, all you need to do is commit your changes and then create a new feature branch for your new task. When that task is done, just checkout your original feature branch and you can continue where you left off.\n\n\nCollaboration\n\n\nFeature branches also make it easier for two or more developers to collaborate on the same feature, because each feature branch is a sandbox where the only changes are the changes necessary to get the new feature working. That makes it very easy to see and follow what each collaborator is doing.\n\n\nRelease Staging Area\n\n\nAs new development is completed, it gets merged back into the develop branch, which is a staging area for all completed features that haven\u2019t yet been released. So when the next release is branched off of develop, it will automatically contain all of the new stuff that has been finished.\n\n\nSupport For Emergency Fixes\n\n\nGitFlow supports hotfix branches - branches made from a tagged release. You can use these to make an emergency change, safe in the knowledge that the hotfix will only contain your emergency fix. There\u2019s no risk that you\u2019ll accidentally merge in new development at the same time.",
+            "text": "Introducing GitFlow\n\n\n\n\nwhat is git flow\n\n\nGitFlow is a branching model for Git, created by Vincent Driessen.\nit is very well suited to collaboration and scaling the development team.\n\n\nKey Benefits\n\n\nParallel Development\n\n\nOne of the great things about GitFlow is that it makes parallel development very easy,by isolating new development from finished work. New development (such as features and non-emergency bug fixes) is done in feature branches, and is only merged back into main body of code when the developer(s) is happy that the code is ready for release.\nAlthough interruptions are a BadThing(tm), if you are asked to switch from one task to another, all you need to do is commit your changes and then create a new feature branch for your new task. When that task is done, just checkout your original feature branch and you can continue where you left off.\n\n\nCollaboration\n\n\nFeature branches also make it easier for two or more developers to collaborate on the same feature, because each feature branch is a sandbox where the only changes are the changes necessary to get the new feature working. That makes it very easy to see and follow what each collaborator is doing.\n\n\nRelease Staging Area\n\n\nAs new development is completed, it gets merged back into the develop branch, which is a staging area for all completed features that haven\u2019t yet been released. So when the next release is branched off of develop, it will automatically contain all of the new stuff that has been finished.\n\n\nSupport For Emergency Fixes\n\n\nGitFlow supports hotfix branches - branches made from a tagged release. You can use these to make an emergency change, safe in the knowledge that the hotfix will only contain your emergency fix. There\u2019s no risk that you\u2019ll accidentally merge in new development at the same time.\n\n\nImplementation\n\n\nDecentralized but centralized\n\n\nThe repository setup that we use and that works well with this branching model, is that with a central \u201ctruth\u201d repo. Note that this repo is only considered to be the central one (since Git is a DVCS, there is no such thing as a central repo at a technical level). We will refer to this repo as origin, since this name is familiar to all Git users.\n\n\nEach developer pulls and pushes to origin.\n\n\n\n\nThe main branches\n\n\n\n\nThe central repo holds two main branches with an infinite lifetime.\n\n\n\n\nmaster\n\n\ndevelop\n\n\n\n\nThe master branch at origin is the default branch when creating new repository at Git. Parallel to the master branch, another branch exists called develop.\n\n\nWe consider origin/master to be the main branch where the source code of HEAD always reflects a production-ready state.\n\n\nWe consider origin/develop to be the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release.\n\n\nWhen the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master somehow and then tagged with a release number.\n\n\nTherefore, each time when changes are merged back into master, this is a new production release by \ndefinition\n.\nso that theoretically, we could use a Git hook script to automatically build and roll-out our software to our production servers everytime there was a commit on master.\n\n\nSupporting branches\n\n\nNext to the main branches master and develop, our development model uses a variety of supporting branches to aid parallel development between team members, ease tracking of features, prepare for production releases and to assist in quickly fixing live production problems. Unlike the main branches, these branches always have a limited life time, since they will be removed eventually.\n\n\nThe different types of branches we may use are:\n\n\n\n\nFeature branches\n\n\nRelease branches\n\n\nHotfix branches\n\n\nBugfix branches\n\n\n\n\nEach of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets.\n\n\nBy no means are these branches \u201cspecial\u201d from a technical perspective. The branch types are categorized by how we use them. They are of course plain old Git branches.\n\n\nFeature Branches\n\n\n\n\nMust branch off from:\n\n \n develop \n\n\nMust merge back into:\n\n\n develop \n\n\nBranch naming convention:\n\n\n feature_< nameOfFeature > \n\n\nFeature branches are used to develop new features for the upcoming or a distant future release.\n\n\nFeature branch exists as long as the feature is in development, but will eventually be merged back into develop to add the new feature to the upcoming release.\n\n\nCreating Feature branch\n\n\nWhen starting work on a new feature, branch off from the develop branch.\n\n\n$ git checkout develop\n$ git checkout -b feature_newFeature\n# Switched to a new branch \"feature_newFeature\"\n\n\n\n\nIncorporating a finished feature on develop\n\n\n$ git checkout develop\n#Switched to branch 'develop'\n$ git merge --no-ff feature_newFeature\n#Updating ea1b82a..05e9557\n#(Summary of changes)\n$ git branch -d feature_newFeature\n#Deleted branch myfeature (was 05e9557).\n$ git push origin develop\n\n\n\n\nThe --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.\n\nIn the latter case, it is impossible to see from the Git history which of the commit objects together have implemented a feature\u2014you would have to manually read all the log messages.",
             "title": "GitFlow"
         },
         {
@@ -129,6 +89,111 @@
             "location": "/Git/gitflow/#support-for-emergency-fixes",
             "text": "GitFlow supports hotfix branches - branches made from a tagged release. You can use these to make an emergency change, safe in the knowledge that the hotfix will only contain your emergency fix. There\u2019s no risk that you\u2019ll accidentally merge in new development at the same time.",
             "title": "Support For Emergency Fixes"
+        },
+        {
+            "location": "/Git/gitflow/#implementation",
+            "text": "",
+            "title": "Implementation"
+        },
+        {
+            "location": "/Git/gitflow/#decentralized-but-centralized",
+            "text": "The repository setup that we use and that works well with this branching model, is that with a central \u201ctruth\u201d repo. Note that this repo is only considered to be the central one (since Git is a DVCS, there is no such thing as a central repo at a technical level). We will refer to this repo as origin, since this name is familiar to all Git users.  Each developer pulls and pushes to origin.",
+            "title": "Decentralized but centralized"
+        },
+        {
+            "location": "/Git/gitflow/#the-main-branches",
+            "text": "The central repo holds two main branches with an infinite lifetime.   master  develop   The master branch at origin is the default branch when creating new repository at Git. Parallel to the master branch, another branch exists called develop.  We consider origin/master to be the main branch where the source code of HEAD always reflects a production-ready state.  We consider origin/develop to be the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release.  When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master somehow and then tagged with a release number.  Therefore, each time when changes are merged back into master, this is a new production release by  definition .\nso that theoretically, we could use a Git hook script to automatically build and roll-out our software to our production servers everytime there was a commit on master.",
+            "title": "The main branches"
+        },
+        {
+            "location": "/Git/gitflow/#supporting-branches",
+            "text": "Next to the main branches master and develop, our development model uses a variety of supporting branches to aid parallel development between team members, ease tracking of features, prepare for production releases and to assist in quickly fixing live production problems. Unlike the main branches, these branches always have a limited life time, since they will be removed eventually.  The different types of branches we may use are:   Feature branches  Release branches  Hotfix branches  Bugfix branches   Each of these branches have a specific purpose and are bound to strict rules as to which branches may be their originating branch and which branches must be their merge targets.  By no means are these branches \u201cspecial\u201d from a technical perspective. The branch types are categorized by how we use them. They are of course plain old Git branches.",
+            "title": "Supporting branches"
+        },
+        {
+            "location": "/Git/gitflow/#feature-branches",
+            "text": "Must branch off from: \n   develop   Must merge back into:   develop   Branch naming convention:   feature_< nameOfFeature >   Feature branches are used to develop new features for the upcoming or a distant future release.  Feature branch exists as long as the feature is in development, but will eventually be merged back into develop to add the new feature to the upcoming release.",
+            "title": "Feature Branches"
+        },
+        {
+            "location": "/Git/gitflow/#creating-feature-branch",
+            "text": "When starting work on a new feature, branch off from the develop branch.  $ git checkout develop\n$ git checkout -b feature_newFeature\n# Switched to a new branch \"feature_newFeature\"",
+            "title": "Creating Feature branch"
+        },
+        {
+            "location": "/Git/gitflow/#incorporating-a-finished-feature-on-develop",
+            "text": "$ git checkout develop\n#Switched to branch 'develop'\n$ git merge --no-ff feature_newFeature\n#Updating ea1b82a..05e9557\n#(Summary of changes)\n$ git branch -d feature_newFeature\n#Deleted branch myfeature (was 05e9557).\n$ git push origin develop  The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature. \nIn the latter case, it is impossible to see from the Git history which of the commit objects together have implemented a feature\u2014you would have to manually read all the log messages.",
+            "title": "Incorporating a finished feature on develop"
+        },
+        {
+            "location": "/Git/gitCommands/",
+            "text": "Git Commands\n\n\nSetup / Config\n\n\nShow current configuration:\n\n\n$ git config --list\n\n\n\n\nShow repository configuration:\n\n\n$ git config --local --list\n\n\n\n\n\nShow global configuration:\n\n\n$ git config --global --list\n\n\n\n\n\nShow system configuration:\n\n\n$ git config --system --list\n\n\n\n\nconfig add helpfull alias\n\n\n[alias]\n    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all\n    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all\n    lg3 = log --graph --color --all --pretty=format:\"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n\"\n    lg4 = log --graph --pretty=format:\"%x09%h | %<(10,trunc)%cd |%<(25,trunc)%d | %s\" --date=short\n    lg = !\"git lg1\"\n    graphviz = \"!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \\\"$@\\\" | sed 's/[0-9a-f][0-9a-f]*/\\\"&\\\"/g' ; echo '}'; }; f\"\n    hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short\n    changed = git show --stat --oneline\n    st = status\n    ci = commit\n    br = branch\n    co = checkout\n    df = diff\n    dc = diff --cached\n    lg = log -p\n    who = shortlog -s --\n\n    feature = \"!git checkout develop && echo feature | git\"\n    release = \"!git checkout develop && echo release | git\"\n    hotfix = \"!git checkout master && echo hotfix | git\"\n    support = \"!git checkout master && echo support | git\"\n\n    start = \"!read BRANCH && git checkout -b $BRANCH_$1 && echo Starting\"\n    finish = \"!read BRANCH && git merge $BRANCH_$1 --no-ff && git checkout develop && git merge $BRANCH_$1 --no-ff && echo Merging\"\n\n    publish = \"!git push origin `git symbolic-ref --short HEAD` && echo Publishing\"\n\n\n\n\n\n\n\nCreate\n\n\nClone an existing repository:\n\n\nThere are two ways:\n\n\nVia SSH\n\n\n$ git clone ssh://user@domain.com/repo.git\n\n\n\n\nVia HTTP\n\n\n$ git clone http://domain.com/user/repo.git\n\n\n\n\nCreate a new local repository:\n\n\n\n$ git init\n\n\n\n\n\n\n\n\ngit log\n\n\nshort log\n\n\n\n    git log --oneline --decorate\n\n\n\n\n\nTo see a very compressed log where each commit is one line\n\n\n\ngit log --online\ngit log --pretty=oneline\n\n\n\n\n\nshow reflog\n\n\n\ngit reflog\n\n\n\n\n\nOr maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches:\n\n\n\ngit log --graph --oneline --decorate --all\n\n\n\n\n\nlog to a text file\n\n\n\ngit log --all --oneline -50 > log50_latest_commits.txt\ngit log --graph --oneline --decorate --all > graph_commits.txt\n\n\n\n\n\n\n* git log --no-merges --stat --reverse master..\n# since forked from master \n\n\n\n\n\nGet commit that exists in one branch and not the other\n\n\n\n* git log feature_gitflowdoc...develop\n# xcxcxcxc\n\n\n\n\n\nGit Branch\n\n\ncreate new local branch and checkout\n\n\n\n* git checkout -b newbranchName\n\n\n\n\n\ndelete branch\n\n\n\ngit branch -d branchNametoDel\n# delete from local\ngit push origin :branchNametoDel\n# delete from remote\n\n\n\n\n\nshow all branches with there last commit\n\n\n\n* git branch -avv\n\n\n\n\n\nGit Commit\n\n\ndelete last commit in a branch and move the changes back to staging.\n\n\n```bash\n\n\ngit reset HEAD~  \n\n\n```",
+            "title": "Cheat sheet"
+        },
+        {
+            "location": "/Git/gitCommands/#git-commands",
+            "text": "",
+            "title": "Git Commands"
+        },
+        {
+            "location": "/Git/gitCommands/#setup-config",
+            "text": "",
+            "title": "Setup / Config"
+        },
+        {
+            "location": "/Git/gitCommands/#show-current-configuration",
+            "text": "$ git config --list",
+            "title": "Show current configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#show-repository-configuration",
+            "text": "$ git config --local --list",
+            "title": "Show repository configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#show-global-configuration",
+            "text": "$ git config --global --list",
+            "title": "Show global configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#show-system-configuration",
+            "text": "$ git config --system --list",
+            "title": "Show system configuration:"
+        },
+        {
+            "location": "/Git/gitCommands/#config-add-helpfull-alias",
+            "text": "[alias]\n    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all\n    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all\n    lg3 = log --graph --color --all --pretty=format:\"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n\"\n    lg4 = log --graph --pretty=format:\"%x09%h | %<(10,trunc)%cd |%<(25,trunc)%d | %s\" --date=short\n    lg = !\"git lg1\"\n    graphviz = \"!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \\\"$@\\\" | sed 's/[0-9a-f][0-9a-f]*/\\\"&\\\"/g' ; echo '}'; }; f\"\n    hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short\n    changed = git show --stat --oneline\n    st = status\n    ci = commit\n    br = branch\n    co = checkout\n    df = diff\n    dc = diff --cached\n    lg = log -p\n    who = shortlog -s --\n\n    feature = \"!git checkout develop && echo feature | git\"\n    release = \"!git checkout develop && echo release | git\"\n    hotfix = \"!git checkout master && echo hotfix | git\"\n    support = \"!git checkout master && echo support | git\"\n\n    start = \"!read BRANCH && git checkout -b $BRANCH_$1 && echo Starting\"\n    finish = \"!read BRANCH && git merge $BRANCH_$1 --no-ff && git checkout develop && git merge $BRANCH_$1 --no-ff && echo Merging\"\n\n    publish = \"!git push origin `git symbolic-ref --short HEAD` && echo Publishing\"",
+            "title": "config add helpfull alias"
+        },
+        {
+            "location": "/Git/gitCommands/#create",
+            "text": "",
+            "title": "Create"
+        },
+        {
+            "location": "/Git/gitCommands/#clone-an-existing-repository",
+            "text": "There are two ways:  Via SSH  $ git clone ssh://user@domain.com/repo.git  Via HTTP  $ git clone http://domain.com/user/repo.git",
+            "title": "Clone an existing repository:"
+        },
+        {
+            "location": "/Git/gitCommands/#create-a-new-local-repository",
+            "text": "$ git init",
+            "title": "Create a new local repository:"
+        },
+        {
+            "location": "/Git/gitCommands/#git-log",
+            "text": "short log  \n    git log --oneline --decorate  To see a very compressed log where each commit is one line  \ngit log --online\ngit log --pretty=oneline  show reflog  \ngit reflog  Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches:  \ngit log --graph --oneline --decorate --all  log to a text file  \ngit log --all --oneline -50 > log50_latest_commits.txt\ngit log --graph --oneline --decorate --all > graph_commits.txt  \n* git log --no-merges --stat --reverse master..\n# since forked from master   Get commit that exists in one branch and not the other  \n* git log feature_gitflowdoc...develop\n# xcxcxcxc",
+            "title": "git log"
+        },
+        {
+            "location": "/Git/gitCommands/#git-branch",
+            "text": "create new local branch and checkout  \n* git checkout -b newbranchName  delete branch  \ngit branch -d branchNametoDel\n# delete from local\ngit push origin :branchNametoDel\n# delete from remote  show all branches with there last commit  \n* git branch -avv",
+            "title": "Git Branch"
+        },
+        {
+            "location": "/Git/gitCommands/#git-commit",
+            "text": "delete last commit in a branch and move the changes back to staging.  ```bash  git reset HEAD~    ```",
+            "title": "Git Commit"
         }
     ]
 }
