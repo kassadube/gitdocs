@@ -7,3 +7,4 @@ pages:
         - 'GitFlow': 'Git/gitflow.md' 
         - 'Cheat sheet': 'Git/gitCommands.md'       
 theme: readthedocs
+
