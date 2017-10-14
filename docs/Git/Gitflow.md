@@ -73,7 +73,7 @@ Each of these branches have a specific purpose and are bound to strict rules as 
 
 By no means are these branches “special” from a technical perspective. The branch types are categorized by how we use them. They are of course plain old Git branches.
 
-### Feature Branches
+## Feature Branches
 
 <img align="right" src="../../img/fb@2x.png" width="150"/>
 
@@ -90,6 +90,30 @@ Feature branches are used to develop new features for the upcoming or a distant 
 
 Feature branch exists as long as the feature is in development, but will eventually be merged back into develop to add the new feature to the upcoming release.
 
+##### Creating Feature branch
+
+When starting work on a new feature, branch off from the develop branch.
+
+```bash
+$ git checkout develop
+$ git checkout -b feature_newFeature
+# Switched to a new branch "feature_newFeature"
+```
+
+#### Incorporating a finished feature on develop
+
+```bash
+$ git checkout develop
+#Switched to branch 'develop'
+$ git merge --no-ff feature_newFeature
+#Updating ea1b82a..05e9557
+#(Summary of changes)
+$ git branch -d feature_newFeature
+#Deleted branch myfeature (was 05e9557).
+$ git push origin develop
+```
+The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature.  
+In the latter case, it is impossible to see from the Git history which of the commit objects together have implemented a feature—you would have to manually read all the log messages.
 
 <div style="clear:both"></div>
 
