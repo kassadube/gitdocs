@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Cheat sheet - My First test Docs</title>
+  <title>Cheat sheet - Fleet git flow</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -35,7 +35,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> My First test Docs</a>
+        <a href="../.." class="icon icon-home"> Fleet git flow</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -54,34 +54,46 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../about/">About</a>
+    <a class="" href="../../about/">Mkdocs</a>
 	    </li>
           
             <li class="toctree-l1">
 		
     <span class="caption-text">Git</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../WhatisGit/">What is Git</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gitflow/">GitFlow</a>
+                </li>
                 <li class=" current">
                     
     <a class="current" href="./">Cheat sheet</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#fff">fff</a></li>
+    <li class="toctree-l3"><a href="#git-commands">Git Commands</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#setup">Setup</a></li>
+            <li><a class="toctree-l4" href="#setup-config">Setup / Config</a></li>
         
             <li><a class="toctree-l4" href="#create">Create</a></li>
+        
+            <li><a class="toctree-l4" href="#git-log">git log</a></li>
+        
+            <li><a class="toctree-l4" href="#git-branch">Git Branch</a></li>
+        
+            <li><a class="toctree-l4" href="#git-commit">Git Commit</a></li>
+        
+            <li><a class="toctree-l4" href="#git-diff">Git diff</a></li>
         
         </ul>
     
 
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../gitflow/">GitFlow</a>
                 </li>
     </ul>
 	    </li>
@@ -96,7 +108,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">My First test Docs</a>
+        <a href="../..">Fleet git flow</a>
       </nav>
 
       
@@ -122,16 +134,15 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="fff">fff</h1>
-<hr>
-
-<h2 id="setup">Setup</h2>
+                <h1 id="git-commands">Git Commands</h1>
+<h2 id="setup-config">Setup / Config</h2>
 <h5 id="show-current-configuration">Show current configuration:</h5>
 <pre><code>$ git config --list
 </code></pre>
 
 <h5 id="show-repository-configuration">Show repository configuration:</h5>
 <pre><code>$ git config --local --list
+
 </code></pre>
 
 <h5 id="show-global-configuration">Show global configuration:</h5>
@@ -143,7 +154,37 @@
 <pre><code>$ git config --system --list
 </code></pre>
 
-<hr>
+<h4 id="config-add-helpfull-alias">config add helpfull alias</h4>
+<pre><code class="bash">[alias]
+    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg3 = log --graph --color --all --pretty=format:&quot;%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n&quot;
+    lg4 = log --graph --pretty=format:&quot;%x09%h | %&lt;(10,trunc)%cd |%&lt;(25,trunc)%d | %s&quot; --date=short
+    lg = !&quot;git lg1&quot;
+    graphviz = &quot;!f() { echo 'digraph git {' ; git log --pretty='format:  %h -&gt; { %p }' \&quot;$@\&quot; | sed 's/[0-9a-f][0-9a-f]*/\&quot;&amp;\&quot;/g' ; echo '}'; }; f&quot;
+    hist = log --pretty=format:\&quot;%h %ad | %s%d [%an]\&quot; --graph --date=short
+    changed = git show --stat --oneline
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    dc = diff --cached
+    lg = log -p
+    who = shortlog -s --
+
+    feature = &quot;!git checkout develop &amp;&amp; echo feature | git&quot;
+    release = &quot;!git checkout develop &amp;&amp; echo release | git&quot;
+    hotfix = &quot;!git checkout master &amp;&amp; echo hotfix | git&quot;
+    support = &quot;!git checkout master &amp;&amp; echo support | git&quot;
+
+    start = &quot;!read BRANCH &amp;&amp; git checkout -b $BRANCH_$1 &amp;&amp; echo Starting&quot;
+    finish = &quot;!read BRANCH &amp;&amp; git merge $BRANCH_$1 --no-ff &amp;&amp; git checkout develop &amp;&amp; git merge $BRANCH_$1 --no-ff &amp;&amp; echo Merging&quot;
+
+   publish = &quot;!git push origin `git symbolic-ref --short HEAD` &amp;&amp; echo Publishing&quot;
+</code></pre>
+
+<hr/>
 
 <h2 id="create">Create</h2>
 <h5 id="clone-an-existing-repository">Clone an existing repository:</h5>
@@ -157,7 +198,94 @@
 </code></pre>
 
 <h5 id="create-a-new-local-repository">Create a new local repository:</h5>
-<pre><code>$ git init
+<pre><code>
+$ git init
+
+</code></pre>
+
+<hr>
+
+<h2 id="git-log">git log</h2>
+<p>short log</p>
+<pre><code class="git">
+    git log --oneline --decorate
+
+</code></pre>
+
+<p>To see a very compressed log where each commit is one line</p>
+<pre><code class="git">
+git log --online
+git log --pretty=oneline
+
+</code></pre>
+
+<p>show reflog</p>
+<pre><code class="bash">
+git reflog
+
+</code></pre>
+
+<p>Or maybe you want to see an ASCII art tree of all the branches, decorated with the names of tags and branches:</p>
+<pre><code class="git">
+git log --graph --oneline --decorate --all
+
+</code></pre>
+
+<p>log to a text file</p>
+<pre><code class="git">
+git log --all --oneline -50 &gt; log50_latest_commits.txt
+git log --graph --oneline --decorate --all &gt; graph_commits.txt
+
+</code></pre>
+
+<pre><code class="bash">
+* git log --no-merges --stat --reverse master..
+# since forked from master 
+
+</code></pre>
+
+<p>Get commit that exists in one branch and not the other</p>
+<pre><code class="bash">
+* git log feature_gitflowdoc...develop
+# xcxcxcxc
+
+</code></pre>
+
+<h2 id="git-branch">Git Branch</h2>
+<p>create new local branch and checkout</p>
+<pre><code class="bash">
+* git checkout -b newbranchName
+
+</code></pre>
+
+<p>delete branch</p>
+<pre><code class="bash">
+git branch -d branchNametoDel
+# delete from local
+git push origin :branchNametoDel
+# delete from remote
+
+</code></pre>
+
+<p>show all branches with there last commit</p>
+<pre><code class="bash">
+* git branch -avv
+
+</code></pre>
+
+<h2 id="git-commit">Git Commit</h2>
+<p>delete last commit in a branch and move the changes back to staging.</p>
+<pre><code class="bash">
+ git reset HEAD~
+
+</code></pre>
+
+<h2 id="git-diff">Git diff</h2>
+<p>show difference only by filename</p>
+<pre><code class="bash">
+git diff branch/hash --name-only
+git diff branch/hash --stat
+
 </code></pre>
               
             </div>
@@ -166,10 +294,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../gitflow/" class="btn btn-neutral float-right" title="GitFlow">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../../about/" class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../gitflow/" class="btn btn-neutral" title="GitFlow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -195,10 +321,8 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../gitflow/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../gitflow/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
