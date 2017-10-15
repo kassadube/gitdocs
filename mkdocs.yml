@@ -1,4 +1,4 @@
-site_name: My First test Docs
+site_name: Fleet git flow
 pages:
     - Home: index.md
     - About: about.md

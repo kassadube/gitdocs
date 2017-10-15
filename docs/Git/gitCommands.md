@@ -179,10 +179,9 @@ delete last commit in a branch and move the changes back to staging.
 
 ```bash
 
- git reset HEAD~  
+ git reset HEAD~
 
- ```
-
+```
 
 ## Git diff
 
