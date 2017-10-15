@@ -185,6 +185,74 @@ $ git branch -d release_1.2
 #Deleted branch release_1.2 (was ff452fe).
 ```
 
+## Hotfix branches
+
+
+
+May branch off from:  
+ <span style="padding-left:40px;font-weight:bold"> master </span>
+
+Must merge back into:  
+<span style="padding-left:40px;font-weight:bold"> develop and master </span>
+
+Branch naming convention:  
+<span style="padding-left:40px;font-weight:bold"> hotfix_1.2.1 </span>
+
+Hotfix branches are very much like release branches in that they are also meant to prepare for a new production release, albeit unplanned.
+They arise from the necessity to act immediately upon an undesired state of a live production version. When a critical bug in a production version must be resolved immediately, a hotfix branch may be branched off from the corresponding tag on the master branch that marks the production version.
+
+The essence is that work of team members (on the develop branch) can continue, while another person is preparing a quick production fix.
+
+### Creating the hotfix branch
+
+Hotfix branches are created from the master branch. For example, say version 1.2 is the current production release running live and causing troubles due to a severe bug. But changes on develop are yet unstable. We may then branch off a hotfix branch and start fixing the problem:
+
+```bash
+
+$ git checkout -b hotfix_1.2.1 master
+#Switched to a new branch "hotfix-1.2.1"
+$ ./bump-version.sh 1.2.1
+#Files modified successfully, version bumped to 1.2.1.
+$ git commit -a -m "Bumped version number to 1.2.1"
+#[hotfix_1.2.1 41e61bb] Bumped version number to 1.2.1
+#1 files changed, 1 insertions(+), 1 deletions(-)
+
+```
+
+### Finishing a hotfix branch
+
+When finished, the bugfix needs to be merged back into master, but also needs to be merged back into develop, in order to safeguard that the bugfix is included in the next release as well. This is completely similar to how release branches are finished.
+
+First, update master and tag the release.
+
+```bash
+$ git checkout master
+#Switched to branch 'master'
+$ git merge --no-ff hotfix_1.2.1
+#Merge made by recursive.
+#(Summary of changes)
+$ git tag -a 1.2.1
+```
+
+Next, include the bugfix in develop, too:
+
+```bash
+$ git checkout develop
+#Switched to branch 'master'
+$ git merge --no-ff hotfix_1.2.1
+#Merge made by recursive.
+#(Summary of changes)
+```
+
+Finally, remove the temporary branch:
+```bash
+$ git branch -d hotfix-1.2.1
+#Deleted branch hotfix-1.2.1 (was abbe5d6).
+```
+
+## Summary 
+
+<img src="../../img/git-model@2x.png" />
 <div style="clear:both"></div>
 
 
