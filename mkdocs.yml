@@ -1,7 +1,7 @@
-site_name: My First test Docs
+site_name: Fleet git flow
 pages:
     - Home: index.md
-    - About: about.md
+    - Mkdocs: about.md
     - Git:         
         - 'What is Git': 'Git/WhatisGit.md'
         - 'GitFlow': 'Git/gitflow.md' 
