@@ -1,5 +1,5 @@
 # Introducing GitFlow
-d
+
 ---
 
 ## what is git flow
