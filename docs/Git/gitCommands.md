@@ -26,15 +26,15 @@ $ git config --system --list
 #### config add helpfull alias
 ```bash
 [alias]
-	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-	lg3 = log --graph --color --all --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
-	lg4 = log --graph --pretty=format:"%x09%h | %<(10,trunc)%cd |%<(25,trunc)%d | %s" --date=short
-	lg = !"git lg1"
-	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	changed = git show --stat --oneline
-	st = status
+    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg3 = log --graph --color --all --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%x20(%ce)%n%x20%s%n"
+    lg4 = log --graph --pretty=format:"%x09%h | %<(10,trunc)%cd |%<(25,trunc)%d | %s" --date=short
+    lg = !"git lg1"
+    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    changed = git show --stat --oneline
+    st = status
     ci = commit
     br = branch
     co = checkout
@@ -43,18 +43,18 @@ $ git config --system --list
     lg = log -p
     who = shortlog -s --
 
-	feature = "!git checkout develop && echo feature | git"
-  	release = "!git checkout develop && echo release | git"
-  	hotfix = "!git checkout master && echo hotfix | git"
-  	support = "!git checkout master && echo support | git"
+    feature = "!git checkout develop && echo feature | git"
+    release = "!git checkout develop && echo release | git"
+    hotfix = "!git checkout master && echo hotfix | git"
+    support = "!git checkout master && echo support | git"
 
-  	start = "!read BRANCH && git checkout -b $BRANCH_$1 && echo Starting"
-  	finish = "!read BRANCH && git merge $BRANCH_$1 --no-ff && git checkout develop && git merge $BRANCH_$1 --no-ff && echo Merging"
+    start = "!read BRANCH && git checkout -b $BRANCH_$1 && echo Starting"
+    finish = "!read BRANCH && git merge $BRANCH_$1 --no-ff && git checkout develop && git merge $BRANCH_$1 --no-ff && echo Merging"
 
-  	publish = "!git push origin `git symbolic-ref --short HEAD` && echo Publishing"
+   publish = "!git push origin `git symbolic-ref --short HEAD` && echo Publishing"
 ```
 
-<hr>
+<hr/>
 
 ## Create
 
@@ -179,11 +179,20 @@ delete last commit in a branch and move the changes back to staging.
 
 ```bash
 
- git reset HEAD~  
+ git reset HEAD~
 
- ```
+```
 
+## Git diff
 
+show difference only by filename
+
+```bash
+
+git diff branch/hash --name-only
+git diff branch/hash --stat
+
+```
 
 
 
