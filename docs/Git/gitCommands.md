@@ -184,6 +184,16 @@ delete last commit in a branch and move the changes back to staging.
  ```
 
 
+## Git diff
+
+show difference only by filename
+
+```bash
+
+git diff branch/hash --name-only
+git diff branch/hash --stat
+
+```
 
 
 
