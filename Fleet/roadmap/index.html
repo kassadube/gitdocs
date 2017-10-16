@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>What is Git - Fleet git flow</title>
+  <title>Roadmap - Fleet git flow</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "What is Git";
-    var mkdocs_page_input_path = "Git\\WhatisGit.md";
-    var mkdocs_page_url = "/Git/WhatisGit/";
+    var mkdocs_page_name = "Roadmap";
+    var mkdocs_page_input_path = "Fleet\\roadmap.md";
+    var mkdocs_page_url = "/Fleet/roadmap/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -61,9 +61,15 @@
 		
     <span class="caption-text">Fleet</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../Fleet/roadmap/">Roadmap</a>
+    <a class="current" href="./">Roadmap</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#fleet-roadmap">Fleet Roadmap</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -72,23 +78,17 @@
 		
     <span class="caption-text">Git</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">What is Git</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#what-is-git">What is Git</a></li>
-    
-
-    </ul>
+    <a class="" href="../../Git/WhatisGit/">What is Git</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../gitflow/">GitFlow</a>
+    <a class="" href="../../Git/gitflow/">GitFlow</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../gitCommands/">Cheat sheet</a>
+    <a class="" href="../../Git/gitCommands/">Cheat sheet</a>
                 </li>
     </ul>
 	    </li>
@@ -115,11 +115,11 @@
     
       
         
-          <li>Git &raquo;</li>
+          <li>Fleet &raquo;</li>
         
       
     
-    <li>What is Git</li>
+    <li>Roadmap</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -129,10 +129,43 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="what-is-git">What is Git</h1>
-<p>Git is by far, the most widely used modern version control system in the world today is Git. Git is a mature, actively maintained open source project originally developed in 2005 by Linus Torvalds, the famous creator of the Linux operating system kernel. A staggering number of software projects rely on Git for version control, including commercial projects as well as open source. Developers who have worked with Git are well represented in the pool of available software development talent and it works well on a wide range of operating systems and IDEs (Integrated Development Environments).
-Having a distributed architecture, Git is an example of a DVCS (hence Distributed Version Control System). Rather than have only one single place for the full version history of the software as is common in once-popular version control systems like CVS or Subversion (also known as SVN), in Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.</p>
-<p>In addition to being distributed, Git has been designed with performance, security and flexibility in mind.</p>
+                <h1 id="fleet-roadmap">Fleet Roadmap</h1>
+<ul>
+<li>Building client side  development environment with the tools:<ul>
+<li>Node.js<br />
+    create a node.js project that will be using as a development server to build and test the fleet client.  </li>
+<li>webpack configuration dev/prod.<br />
+    webpack is a module bundler. webpack takes modules with dependencies and generates static assets representing those modules. As websites are evolving into web apps they are relying more and more on JavaScript.</li>
+<li>List of packages that will be used in the project (dependencies / devDependencies)<br />
+ the packages are libraries that the site will be using (React, React-Redux, Bootstrap, etc..)</li>
+</ul>
+</li>
+<li>Building server api (Asp.core / webapi).</li>
+<li>Creating Authentication mechanism token based on the server side</li>
+<li>Implement Authentication for all ajax requests</li>
+<li>Mapping all api requests that is being used in the messages module.<ul>
+<li>Produce all the maped requests for the client to use.<br />
+  at the beginning some of the requests might be as mock so the client will be able to test without being.</li>
+</ul>
+</li>
+<li>Building the site state structure according to the api requests.    </li>
+<li>Build Ajax action implementing the api requests and the site state.</li>
+<li>Build unit test for all actions.</li>
+<li>Create a dictionary mechanism server/client/database.<br />
+ before starting the building this item should be explain in details, this task as a potential for problems.</li>
+<li>build a datetime mechanism that should be used all over the site dates. </li>
+<li>create html skeleton using css according to the design.</li>
+</ul>
+<p>The outcome of these tasks should be :</p>
+<ul>
+<li>Git repository in vsts.</li>
+<li>Readme file that explains how to clone the repository and use it.<br />
+so every developer (new/old) could understand how to start using the app.</li>
+<li>document that explains all packages with the version in the time that installed.</li>
+<li>folder structure for the client side.</li>
+<li>The Authentication should be explained.</li>
+<li>Every request should be documented with the result structure.</li>
+</ul>
               
             </div>
           </div>
@@ -140,10 +173,10 @@ Having a distributed architecture, Git is an example of a DVCS (hence Distribute
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../gitflow/" class="btn btn-neutral float-right" title="GitFlow">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Git/WhatisGit/" class="btn btn-neutral float-right" title="What is Git">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../Fleet/roadmap/" class="btn btn-neutral" title="Roadmap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../about/" class="btn btn-neutral" title="Mkdocs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -169,10 +202,10 @@ Having a distributed architecture, Git is an example of a DVCS (hence Distribute
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../Fleet/roadmap/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../gitflow/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../Git/WhatisGit/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
