@@ -173,6 +173,12 @@ show all branches with there last commit
 
 ```
 
+update remote branches 
+
+```bash
+$ git remote update origin --p
+```
+
 ## Git Commit
 
 delete last commit in a branch and move the changes back to staging.
