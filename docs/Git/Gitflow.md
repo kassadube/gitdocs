@@ -253,6 +253,122 @@ $ git branch -d hotfix-1.2.1
 ## Summary 
 
 <img src="../../img/git-model@2x.png" />
+
+
+## Git Commands
+## Features
+
+### Create a feature branch
+
+```bash
+
+ git checkout -b feature_MYFEATURE develop
+
+```
+### Share a feature branch
+
+```bash
+$ git checkout feature_MYFEATURE
+$ git push origin feature_MYFEATURE
+```
+### Get latest for a feature branch
+
+```bash
+$ git checkout feature_MYFEATURE
+$ git pull --rebase origin feature_MYFEATURE
+```
+
+
+### Finalize a feature branch
+
+```bash
+$ git checkout develop
+$ git merge --no-ff feature_MYFEATURE
+$ git branch -d feature_MYFEATURE
+```
+
+### Push the merged feature branch
+
+```bash
+$ git push origin develop
+$ git push origin :feature_MYFEATURE` _(if pushed)_
+```
+
+
+## Releases
+
+### Create a release branch
+
+```bash
+$ git checkout -b release-1.2.0 develop
+```
+
+### Share a release branch
+
+```bash
+$ git checkout release-1.2.0
+$ git push origin release-1.2.0
+```
+
+### Get latest for a release branch
+
+```bash
+$  git checkout release-1.2.0
+$ git pull --rebase origin release-1.2.0
+```
+
+
+### Finalize a release branch
+
+```bash
+$ git checkout master
+$ git merge --no-ff release-1.2.0
+$ git tag -a 1.2.0
+$ git checkout develop
+$ git merge --no-ff release-1.2.0
+$ git branch -d release-1.2.0
+```
+
+### Push the merged feature branch
+
+```bash
+ $ git push origin master
+ $ git push origin develop
+ $ git push origin --tags
+ $ git push origin :release-1.2.0 _(if pushed)_
+```
+
+
+## Hotfixes
+
+### Create a hotfix branch
+
+```bash
+$ git checkout -b hotfix_1.2.1 [commit]
+```
+
+### Finalize a hotfix branch
+
+```bash
+$ git checkout master
+$ git merge --no-ff hotfix_1.2.1
+$ git tag -a 1.2.1
+$ git checkout develop
+$ git merge --no-ff hotfix_1.2.1
+$ git branch -d hotfix_1.2.1
+```
+
+### Push the merged hotfix branch
+
+```bash
+$ git push origin master
+$ git push origin develop
+$ git push origin --tags
+$ git push origin :hotfix_1.2.1 _(if pushed)_
+```
+
+
+
 <div style="clear:both"></div>
 
 
