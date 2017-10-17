@@ -31,5 +31,9 @@ The git clone command copies an existing Git repository. This copy is a working 
 $ git clone http://github.com/vogella/gitbook.git
 ```
 
+![](../img/intro-to-git-and-github-8-638.jpg)
+
+
+
 [Git download page]: <https://git-scm.com/downloads>
 
