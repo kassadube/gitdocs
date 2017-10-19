@@ -103,6 +103,14 @@
         
             <li><a class="toctree-l4" href="#summary">Summary</a></li>
         
+            <li><a class="toctree-l4" href="#git-commands">Git Commands</a></li>
+        
+            <li><a class="toctree-l4" href="#features">Features</a></li>
+        
+            <li><a class="toctree-l4" href="#releases">Releases</a></li>
+        
+            <li><a class="toctree-l4" href="#hotfixes">Hotfixes</a></li>
+        
         </ul>
     
 
@@ -326,8 +334,89 @@ $ git merge --no-ff hotfix_1.2.1
 </code></pre>
 
 <h2 id="summary">Summary</h2>
-<p><img src="../../img/git-model@2x.png" />
-<div style="clear:both"></div></p>
+<p><img src="../../img/git-model@2x.png" /></p>
+<h2 id="git-commands">Git Commands</h2>
+<h2 id="features">Features</h2>
+<h3 id="create-a-feature-branch">Create a feature branch</h3>
+<pre><code class="bash">
+ git checkout -b feature_MYFEATURE develop
+
+</code></pre>
+
+<h3 id="share-a-feature-branch">Share a feature branch</h3>
+<pre><code class="bash">$ git checkout feature_MYFEATURE
+$ git push origin feature_MYFEATURE
+</code></pre>
+
+<h3 id="get-latest-for-a-feature-branch">Get latest for a feature branch</h3>
+<pre><code class="bash">$ git checkout feature_MYFEATURE
+$ git pull --rebase origin feature_MYFEATURE
+</code></pre>
+
+<h3 id="finalize-a-feature-branch">Finalize a feature branch</h3>
+<pre><code class="bash">$ git checkout develop
+$ git merge --no-ff feature_MYFEATURE
+$ git branch -d feature_MYFEATURE
+</code></pre>
+
+<h3 id="push-the-merged-feature-branch">Push the merged feature branch</h3>
+<pre><code class="bash">$ git push origin develop
+$ git push origin :feature_MYFEATURE` _(if pushed)_
+</code></pre>
+
+<h2 id="releases">Releases</h2>
+<h3 id="create-a-release-branch">Create a release branch</h3>
+<pre><code class="bash">$ git checkout -b release-1.2.0 develop
+</code></pre>
+
+<h3 id="share-a-release-branch">Share a release branch</h3>
+<pre><code class="bash">$ git checkout release-1.2.0
+$ git push origin release-1.2.0
+</code></pre>
+
+<h3 id="get-latest-for-a-release-branch">Get latest for a release branch</h3>
+<pre><code class="bash">$  git checkout release-1.2.0
+$ git pull --rebase origin release-1.2.0
+</code></pre>
+
+<h3 id="finalize-a-release-branch">Finalize a release branch</h3>
+<pre><code class="bash">$ git checkout master
+$ git merge --no-ff release-1.2.0
+$ git tag -a 1.2.0
+$ git checkout develop
+$ git merge --no-ff release-1.2.0
+$ git branch -d release-1.2.0
+</code></pre>
+
+<h3 id="push-the-merged-feature-branch_1">Push the merged feature branch</h3>
+<pre><code class="bash"> $ git push origin master
+ $ git push origin develop
+ $ git push origin --tags
+ $ git push origin :release-1.2.0 _(if pushed)_
+</code></pre>
+
+<h2 id="hotfixes">Hotfixes</h2>
+<h3 id="create-a-hotfix-branch">Create a hotfix branch</h3>
+<pre><code class="bash">$ git checkout -b hotfix_1.2.1 [commit]
+</code></pre>
+
+<h3 id="finalize-a-hotfix-branch">Finalize a hotfix branch</h3>
+<pre><code class="bash">$ git checkout master
+$ git merge --no-ff hotfix_1.2.1
+$ git tag -a 1.2.1
+$ git checkout develop
+$ git merge --no-ff hotfix_1.2.1
+$ git branch -d hotfix_1.2.1
+</code></pre>
+
+<h3 id="push-the-merged-hotfix-branch">Push the merged hotfix branch</h3>
+<pre><code class="bash">$ git push origin master
+$ git push origin develop
+$ git push origin --tags
+$ git push origin :hotfix_1.2.1 _(if pushed)_
+</code></pre>
+
+<div style="clear:both"></div>
               
             </div>
           </div>
