@@ -4,6 +4,9 @@ pages:
     - Mkdocs: about.md
     - Fleet:
         - 'Fleet/roadmap.md'
+        - 'pointer API':
+            - 'Fleet/PointerAPI/TODO.md'
+            - 'Fleet/PointerAPI/pointerapi.md'
     - Git:         
         - 'What is Git': 'Git/WhatisGit.md'
         - 'GitFlow': 'Git/gitflow.md' 
