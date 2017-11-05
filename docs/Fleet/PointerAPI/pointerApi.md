@@ -11,6 +11,7 @@ Serilog provides diagnostic logging with structure even data
 ## IIS Deployment
 
 
+## Redis Implementation
 
 
 [Seriolg]: <https://serilog.net/>
