@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Pointerapi - Fleet git flow</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Pointerapi";
+    var mkdocs_page_input_path = "Fleet\\PointerAPI\\pointerapi.md";
+    var mkdocs_page_url = "/Fleet/PointerAPI/pointerapi/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Fleet git flow</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../../about/">Mkdocs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Fleet</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../roadmap/">Roadmap</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">pointer API</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../TODO/">TODO</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">Pointerapi</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#pointer-api">Pointer API</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#iis-deployment">IIS Deployment</a></li>
+        
+            <li><a class="toctree-l5" href="#site-configuration">Site Configuration</a></li>
+        
+            <li><a class="toctree-l5" href="#logging">Logging</a></li>
+        
+            <li><a class="toctree-l5" href="#cros-origin-requests-cors">Cros Origin Requests (cors)</a></li>
+        
+            <li><a class="toctree-l5" href="#redis-implementation">Redis Implementation</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Git</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../Git/WhatisGit/">What is Git</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Git/gitflow/">GitFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../Git/gitCommands/">Cheat sheet</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Fleet git flow</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Fleet &raquo;</li>
+        
+      
+        
+          <li>pointer API &raquo;</li>
+        
+      
+    
+    <li>Pointerapi</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="pointer-api">Pointer API</h1>
+<h2 id="iis-deployment">IIS Deployment</h2>
+<h3 id="host-aspnet-core-on-windows-with-iis">Host ASP.NET Core on Windows with IIS</h3>
+<p>The new api is runing on Kestrel server while the iis use as reverse proxy.<br />
+The Kestrel web server is a new web server as part of ASP.NET Core.<br />
+It is now the preferred web server for all new ASP.NET applications.<br />
+the published site is a console app and to run it on iis we need to follow these steps:  </p>
+<ol>
+<li>
+<p>Install the <a href="https://aka.ms/dotnetcore.2.0.0-windowshosting">.NET Core Windows Server Hosting bundle</a> on the hosting system. The bundle installs the .NET Core Runtime, .NET Core Library, and the ASP.NET Core Module. The module creates the reverse-proxy between IIS and the Kestrel server. If the system doesn't have an Internet connection, obtain and install the Microsoft Visual C++ 2015 Redistributable before installing the .NET Core Windows Server Hosting bundle.</p>
+</li>
+<li>
+<p>Restart the system or execute net stop was /y followed by net start w3svc from a command prompt to pick up a change to the system PATH.</p>
+</li>
+<li>
+<p>Create a new IIS Application Pool.<br />
+the ".Net Framework version:" should be "No Managed Code".</p>
+</li>
+<li>
+<p>Create new application in the iis that uses the new application pool.</p>
+</li>
+<li>
+<p>In the new Application directory put the site published content.</p>
+</li>
+<li>
+<p>IIS reset and we are ready to go.</p>
+</li>
+</ol>
+<h2 id="site-configuration">Site Configuration</h2>
+<p>The new site uses json files for configuration instead of Web.config.<br />
+the config file named "appsettings.production.json"</p>
+<pre><code class="javascript">{
+  &quot;ConnectionStrings&quot;: {
+    &quot;DefaultConnection&quot;: &quot;Data Source=DB/database.db&quot;,
+    &quot;FleetConnection&quot;: &quot;Data Source=207.232.46.176;Initial Catalog=Fleet;User ID=**;Password=**&quot;
+  },
+  &quot;Caching&quot;: {
+     &quot;Redis&quot;: {
+      &quot;Connection&quot;: &quot;********************************************************,ssl=False,abortConnect=False,connectRetry=5&quot;,
+      &quot;Name&quot;: &quot;DEV&quot;
+    }
+  },
+  &quot;Serilog&quot;: {
+    &quot;LogDirectory&quot;: &quot;C:\\API-CORE-LOGS&quot;,
+    &quot;IncludeScopes&quot;: false,
+    &quot;LogLevel&quot;: {
+       &quot;Default&quot;: &quot;Trace&quot;,
+      &quot;System&quot;: &quot;Trace&quot;,
+      &quot;Microsoft&quot;: &quot;Trace&quot;
+    }
+  }
+}
+</code></pre>
+
+<h2 id="logging">Logging</h2>
+<p>For logging we will use <a href="https://serilog.net/">Seriolg</a>.<br />
+Serilog provides diagnostic logging with structure even data</p>
+<h3 id="structured-logging">Structured logging</h3>
+<p>Treating logs as data gives us greater insight into the operational activity of the systems we build. Structured logging, which is using a consistent, predetermined message format containing semantic information, builds on this technique and enables tools such as Graylog2 and Splunk to yield deeper insights. We recommend adopting structured logging because the benefits outweigh the minimal effort involved and the practice is becoming the default standard.<br />
+download <a href="https://getseq.net/">Seq</a> to enable logging.<br />
+browse to http://localhost:5341 to see the logs.<br />
+<strong>Seq is enabled only for testing</strong></p>
+<h2 id="cros-origin-requests-cors">Cros Origin Requests (cors)</h2>
+<h2 id="redis-implementation">Redis Implementation</h2>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../Git/WhatisGit/" class="btn btn-neutral float-right" title="What is Git">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../TODO/" class="btn btn-neutral" title="TODO"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../TODO/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../../Git/WhatisGit/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../../js/theme.js"></script>
+
+</body>
+</html>

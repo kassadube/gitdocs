@@ -51,6 +51,76 @@
             "title": "Fleet Roadmap"
         },
         {
+            "location": "/Fleet/PointerAPI/TODO/",
+            "text": "TODO\n\n\nbuild webapi using asp core\n\n\nInfrastruction\n\n\n\n\n~~Add DI  (DependencyInjection)~~\n\n      currently we will use the default DI, in the future we might change it to Autofac or structuremap.\n\n\n~~Add Log mechanism using serilog.~~\n\n\n~~add support for cors.~~\n\n\n~~add support for redis cache and session management~~\n\n\n~~build authentication using JWT (javascript web token)~~\n\n\n~~Add swagger for testing api~~\n\n\nbuild test project.\n\n\nbuild multi tier app (PL, BLL, DAL)\n\n\nClean startup class separate concepts\n\n\n\n\nSite Deployment\n\n\n\n\nadd cake script\n\n\ndeploy site on iis",
+            "title": "TODO"
+        },
+        {
+            "location": "/Fleet/PointerAPI/TODO/#todo",
+            "text": "",
+            "title": "TODO"
+        },
+        {
+            "location": "/Fleet/PointerAPI/TODO/#build-webapi-using-asp-core",
+            "text": "",
+            "title": "build webapi using asp core"
+        },
+        {
+            "location": "/Fleet/PointerAPI/TODO/#infrastruction",
+            "text": "~~Add DI  (DependencyInjection)~~ \n      currently we will use the default DI, in the future we might change it to Autofac or structuremap.  ~~Add Log mechanism using serilog.~~  ~~add support for cors.~~  ~~add support for redis cache and session management~~  ~~build authentication using JWT (javascript web token)~~  ~~Add swagger for testing api~~  build test project.  build multi tier app (PL, BLL, DAL)  Clean startup class separate concepts",
+            "title": "Infrastruction"
+        },
+        {
+            "location": "/Fleet/PointerAPI/TODO/#site-deployment",
+            "text": "add cake script  deploy site on iis",
+            "title": "Site Deployment"
+        },
+        {
+            "location": "/Fleet/PointerAPI/pointerapi/",
+            "text": "Pointer API\n\n\nIIS Deployment\n\n\nHost ASP.NET Core on Windows with IIS\n\n\nThe new api is runing on Kestrel server while the iis use as reverse proxy.\n\nThe Kestrel web server is a new web server as part of ASP.NET Core.\n\nIt is now the preferred web server for all new ASP.NET applications.\n\nthe published site is a console app and to run it on iis we need to follow these steps:  \n\n\n\n\n\n\nInstall the \n.NET Core Windows Server Hosting bundle\n on the hosting system. The bundle installs the .NET Core Runtime, .NET Core Library, and the ASP.NET Core Module. The module creates the reverse-proxy between IIS and the Kestrel server. If the system doesn't have an Internet connection, obtain and install the Microsoft Visual C++ 2015 Redistributable before installing the .NET Core Windows Server Hosting bundle.\n\n\n\n\n\n\nRestart the system or execute net stop was /y followed by net start w3svc from a command prompt to pick up a change to the system PATH.\n\n\n\n\n\n\nCreate a new IIS Application Pool.\n\nthe \".Net Framework version:\" should be \"No Managed Code\".\n\n\n\n\n\n\nCreate new application in the iis that uses the new application pool.\n\n\n\n\n\n\nIn the new Application directory put the site published content.\n\n\n\n\n\n\nIIS reset and we are ready to go.\n\n\n\n\n\n\nSite Configuration\n\n\nThe new site uses json files for configuration instead of Web.config.\n\nthe config file named \"appsettings.production.json\"\n\n\n{\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Data Source=DB/database.db\",\n    \"FleetConnection\": \"Data Source=207.232.46.176;Initial Catalog=Fleet;User ID=**;Password=**\"\n  },\n  \"Caching\": {\n     \"Redis\": {\n      \"Connection\": \"********************************************************,ssl=False,abortConnect=False,connectRetry=5\",\n      \"Name\": \"DEV\"\n    }\n  },\n  \"Serilog\": {\n    \"LogDirectory\": \"C:\\\\API-CORE-LOGS\",\n    \"IncludeScopes\": false,\n    \"LogLevel\": {\n       \"Default\": \"Trace\",\n      \"System\": \"Trace\",\n      \"Microsoft\": \"Trace\"\n    }\n  }\n}\n\n\n\n\nLogging\n\n\nFor logging we will use \nSeriolg\n.\n\nSerilog provides diagnostic logging with structure even data\n\n\nStructured logging\n\n\nTreating logs as data gives us greater insight into the operational activity of the systems we build. Structured logging, which is using a consistent, predetermined message format containing semantic information, builds on this technique and enables tools such as Graylog2 and Splunk to yield deeper insights. We recommend adopting structured logging because the benefits outweigh the minimal effort involved and the practice is becoming the default standard.\n\ndownload \nSeq\n to enable logging.\n\nbrowse to http://localhost:5341 to see the logs.\n\n\nSeq is enabled only for testing\n\n\nCros Origin Requests (cors)\n\n\nRedis Implementation",
+            "title": "Pointerapi"
+        },
+        {
+            "location": "/Fleet/PointerAPI/pointerapi/#pointer-api",
+            "text": "",
+            "title": "Pointer API"
+        },
+        {
+            "location": "/Fleet/PointerAPI/pointerapi/#iis-deployment",
+            "text": "",
+            "title": "IIS Deployment"
+        },
+        {
+            "location": "/Fleet/PointerAPI/pointerapi/#host-aspnet-core-on-windows-with-iis",
+            "text": "The new api is runing on Kestrel server while the iis use as reverse proxy. \nThe Kestrel web server is a new web server as part of ASP.NET Core. \nIt is now the preferred web server for all new ASP.NET applications. \nthe published site is a console app and to run it on iis we need to follow these steps:      Install the  .NET Core Windows Server Hosting bundle  on the hosting system. The bundle installs the .NET Core Runtime, .NET Core Library, and the ASP.NET Core Module. The module creates the reverse-proxy between IIS and the Kestrel server. If the system doesn't have an Internet connection, obtain and install the Microsoft Visual C++ 2015 Redistributable before installing the .NET Core Windows Server Hosting bundle.    Restart the system or execute net stop was /y followed by net start w3svc from a command prompt to pick up a change to the system PATH.    Create a new IIS Application Pool. \nthe \".Net Framework version:\" should be \"No Managed Code\".    Create new application in the iis that uses the new application pool.    In the new Application directory put the site published content.    IIS reset and we are ready to go.",
+            "title": "Host ASP.NET Core on Windows with IIS"
+        },
+        {
+            "location": "/Fleet/PointerAPI/pointerapi/#site-configuration",
+            "text": "The new site uses json files for configuration instead of Web.config. \nthe config file named \"appsettings.production.json\"  {\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Data Source=DB/database.db\",\n    \"FleetConnection\": \"Data Source=207.232.46.176;Initial Catalog=Fleet;User ID=**;Password=**\"\n  },\n  \"Caching\": {\n     \"Redis\": {\n      \"Connection\": \"********************************************************,ssl=False,abortConnect=False,connectRetry=5\",\n      \"Name\": \"DEV\"\n    }\n  },\n  \"Serilog\": {\n    \"LogDirectory\": \"C:\\\\API-CORE-LOGS\",\n    \"IncludeScopes\": false,\n    \"LogLevel\": {\n       \"Default\": \"Trace\",\n      \"System\": \"Trace\",\n      \"Microsoft\": \"Trace\"\n    }\n  }\n}",
+            "title": "Site Configuration"
+        },
+        {
+            "location": "/Fleet/PointerAPI/pointerapi/#logging",
+            "text": "For logging we will use  Seriolg . \nSerilog provides diagnostic logging with structure even data",
+            "title": "Logging"
+        },
+        {
+            "location": "/Fleet/PointerAPI/pointerapi/#structured-logging",
+            "text": "Treating logs as data gives us greater insight into the operational activity of the systems we build. Structured logging, which is using a consistent, predetermined message format containing semantic information, builds on this technique and enables tools such as Graylog2 and Splunk to yield deeper insights. We recommend adopting structured logging because the benefits outweigh the minimal effort involved and the practice is becoming the default standard. \ndownload  Seq  to enable logging. \nbrowse to http://localhost:5341 to see the logs.  Seq is enabled only for testing",
+            "title": "Structured logging"
+        },
+        {
+            "location": "/Fleet/PointerAPI/pointerapi/#cros-origin-requests-cors",
+            "text": "",
+            "title": "Cros Origin Requests (cors)"
+        },
+        {
+            "location": "/Fleet/PointerAPI/pointerapi/#redis-implementation",
+            "text": "",
+            "title": "Redis Implementation"
+        },
+        {
             "location": "/Git/WhatisGit/",
             "text": "What is Git\n\n\nGit is by far, the most widely used modern version control system in the world today is Git. Git is a mature, actively maintained open source project originally developed in 2005 by Linus Torvalds, the famous creator of the Linux operating system kernel. A staggering number of software projects rely on Git for version control, including commercial projects as well as open source. Developers who have worked with Git are well represented in the pool of available software development talent and it works well on a wide range of operating systems and IDEs (Integrated Development Environments).\nHaving a distributed architecture, Git is an example of a DVCS (hence Distributed Version Control System). Rather than have only one single place for the full version history of the software as is common in once-popular version control systems like CVS or Subversion (also known as SVN), in Git, every developer's working copy of the code is also a repository that can contain the full history of all changes.\n\n\nIn addition to being distributed, Git has been designed with performance, security and flexibility in mind.\n\n\nGit Install\n\n\nA Windows version of Git can be found on the \nGit download page\n .\n\n\nCreate a new Git repository\n\n\nEvery Git repository is stored in the .git folder of the directory in which the Git repository has been created. This directory contains the complete history of the repository. The .git/config file contains the configuration for the repository.\n\n\nUse the git init command to create a Git repository in the current directory. Git does not care whether you start with an empty directory or if it contains already files.\n\n\n# initialize the Git repository\n# for the current directory\n* git init\n\n\n\n\nCloning a repository\n\n\nThe git clone command copies an existing Git repository. This copy is a working Git repository with the complete history of the cloned repository. It can be used completely isolated from the original repository.\n\n\n# clone online repository\n$ git clone http://github.com/vogella/gitbook.git",
             "title": "What is Git"
