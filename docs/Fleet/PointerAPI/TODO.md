@@ -10,7 +10,7 @@
 * ~~add support for cors.~~
 * ~~add support for redis cache and session management~~
 * ~~build authentication using JWT (javascript web token)~~
-* Add swagger for testing api
+* ~~Add swagger for testing api~~
 * build test project.
 * build multi tier app (PL, BLL, DAL)
 * Clean startup class separate concepts
