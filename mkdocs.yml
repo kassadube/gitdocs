@@ -7,6 +7,7 @@ pages:
         - 'pointer API':
             - 'Fleet/PointerAPI/TODO.md'
             - 'Fleet/PointerAPI/pointerapi.md'
+            - 'Fleet/PointerAPI/ApiMapping.md'
     - Git:         
         - 'What is Git': 'Git/WhatisGit.md'
         - 'GitFlow': 'Git/gitflow.md' 

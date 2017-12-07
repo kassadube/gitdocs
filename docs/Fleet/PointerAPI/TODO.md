@@ -11,14 +11,14 @@
 * ~~add support for redis cache and session management~~
 * ~~build authentication using JWT (javascript web token)~~
 * ~~Add swagger for testing api~~
-* build test project.
+* ~~build test project.~~
 * build multi tier app (PL, BLL, DAL)
-* Clean startup class separate concepts
+* ~~Clean startup class separate concepts~~
 
 ### Site Deployment
 
 * add cake script
-* deploy site on iis
+* ~~deploy site on iis~~
 
 
 
