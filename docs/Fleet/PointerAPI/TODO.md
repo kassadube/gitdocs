@@ -20,6 +20,15 @@
 * add cake script
 * ~~deploy site on iis~~
 
+### Notification
+
+* add dictionary to site
+* get event family procedure
+* reminder table
+* DTC table
+* reminder card
+* DTC card
+
 
 
 
