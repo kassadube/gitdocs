@@ -100,6 +100,12 @@
     <li class="toctree-l4"><a href="#getnotificationdashboard">GetNotificationDashboard</a></li>
     
 
+    <li class="toctree-l4"><a href="#getreminderlist">GetReminderList</a></li>
+    
+
+    <li class="toctree-l4"><a href="#getdtclist">GetDTCList</a></li>
+    
+
     </ul>
                 </li>
     </ul>
@@ -283,8 +289,9 @@ Response : </p>
 </code></pre>
 
 <h2 id="getnotificationdashboard">GetNotificationDashboard</h2>
-<p>get the events card details</p>
-<p>Url:  /api/Notification/dashboard 
+<p>get the events card details
+Last update in version: 0.1.2
+Url:  /api/Notification/dashboard 
 Action: GET<br />
 Request Params: MaxId (optional)<br />
 Response : </p>
@@ -327,6 +334,84 @@ Response : </p>
       &quot;all&quot;: 200
     }
   },
+  &quot;isSucceded&quot;: true,
+  &quot;error&quot;: null
+}
+</code></pre>
+
+<h2 id="getreminderlist">GetReminderList</h2>
+<p>get account reminder list
+Last update in version: 0.1.2
+Url:  /api/reminder
+Action: GET<br />
+Response : </p>
+<pre><code class="javascrip">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 55,
+      &quot;name&quot;: &quot;vehicle rem 1&quot;,
+      &quot;vehicleId&quot;: 53599,
+      &quot;licensePlate&quot;: &quot;sdasdasd&quot;,
+      &quot;driverId&quot;: null,
+      &quot;driverName&quot;: &quot;&quot;,
+      &quot;eventType&quot;: 17,
+      &quot;nextMaitanence&quot;: &quot;2016-11-24T00:00:00&quot;
+    },
+    {
+      &quot;id&quot;: 56,
+      &quot;name&quot;: &quot;vehicle rem 2&quot;,
+      &quot;vehicleId&quot;: 53581,
+      &quot;licensePlate&quot;: &quot;T505274C1&quot;,
+      &quot;driverId&quot;: null,
+      &quot;driverName&quot;: &quot;&quot;,
+      &quot;eventType&quot;: 18,
+      &quot;nextMaitanence&quot;: null
+    }
+    ]
+  &quot;isSucceded&quot;: true,
+  &quot;error&quot;: null
+}
+</code></pre>
+
+<h2 id="getdtclist">GetDTCList</h2>
+<p>get account dtc list
+Last update in version: 0.1.2
+Url:  /api/dtc
+Action: GET<br />
+Response : </p>
+<pre><code class="javascrip">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 3,
+      &quot;licensePlate&quot;: &quot;S 93333&quot;,
+      &quot;status&quot;: 1,
+      &quot;type&quot;: &quot;Powertrain&quot;,
+      &quot;event&quot;: &quot;Fuel Pump Secondary Circuit High&quot;,
+      &quot;code&quot;: &quot;P0232&quot;,
+      &quot;receivedTime&quot;: &quot;2017-11-27T17:15:33.18&quot;,
+      &quot;receivedOdometer&quot;: 0,
+      &quot;updatedTime&quot;: &quot;2017-11-27T17:18:50.19&quot;,
+      &quot;updatedOdometer&quot;: 0,
+      &quot;closedTime&quot;: null,
+      &quot;closedOdometer&quot;: null,
+      &quot;isRead&quot;: null
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;licensePlate&quot;: &quot;S 93333&quot;,
+      &quot;status&quot;: 1,
+      &quot;type&quot;: &quot;Body&quot;,
+      &quot;event&quot;: &quot;Wiper Washer Fluid Level Sensor Circuit Short To Battery&quot;,
+      &quot;code&quot;: &quot;B1481&quot;,
+      &quot;receivedTime&quot;: &quot;2017-11-27T17:18:50.19&quot;,
+      &quot;receivedOdometer&quot;: 0,
+      &quot;updatedTime&quot;: null,
+      &quot;updatedOdometer&quot;: null,
+      &quot;closedTime&quot;: null,
+      &quot;closedOdometer&quot;: null,
+      &quot;isRead&quot;: null
+    }
+    ]
   &quot;isSucceded&quot;: true,
   &quot;error&quot;: null
 }
