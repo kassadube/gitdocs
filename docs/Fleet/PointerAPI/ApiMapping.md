@@ -8,7 +8,7 @@ Url: /api/Alert/family
 Action: GET  
 Request Params:  addSubFamilies (optional)  
 Response : 
-```javascrip
+```javascript
 {
   "data": [
     {
@@ -45,7 +45,7 @@ Url: /api/Alert/Subfamily
 Action: GET  
 Request Params:    
 Response : 
-```javascrip
+```javascript
 {
   "data": [
     {
@@ -75,7 +75,7 @@ Url:  /api/Notification
 Action: GET  
 Request Params:  MaxId (optional)  
 Response : 
-```javascrip
+```javascript
 {
   "data": [
     {
@@ -115,7 +115,7 @@ Url:  /api/Notification/details
 Action: GET  
 Request Params: NotificationId, LangId (optional)  
 Response : 
-```javascrip
+```javascript
 {
   "data": {
     "id": 9679764,
@@ -135,7 +135,7 @@ Url:  /api/Notification/dashboard
 Action: GET  
 Request Params: MaxId (optional)  
 Response : 
-```javascrip
+```javascript
 {
   "data": {
     "severity": [
@@ -187,7 +187,7 @@ Last update in version: 0.1.2
 Url:  /api/reminder
 Action: GET  
 Response : 
-```javascrip
+```javascript
 {
   "data": [
     {
